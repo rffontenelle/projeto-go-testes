@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         go_version: ['1.17', '1.18', '>=1.18']
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -23,6 +24,7 @@ jobs:
 
   build:
     strategy:
+      fail-fast: false
       matrix:
         go_version: ['1.17', '1.18', '>=1.18']
         os: [ubuntu-latest, windows-latest, macos-latest]
