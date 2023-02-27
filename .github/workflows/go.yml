@@ -24,6 +24,7 @@ jobs:
     - uses: actions/setup-go@v3
       with:
         go-version: ${{ matrix.go_version }}
+    - run: docker-compose build
     - run: docker-compose up -d
     - run: go test -v main_test.go
 
